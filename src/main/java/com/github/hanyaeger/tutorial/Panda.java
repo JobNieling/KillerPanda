@@ -17,6 +17,8 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	
 	private HealthText healthText;
 	private int health = 9;
+	
+	private Weapon weapon;
 
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda) {
 		super("sprites/walkingPanda.png", initialLocation, new Size(40, 80), 1, 3);
