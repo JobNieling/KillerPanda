@@ -17,8 +17,8 @@ public class Farm extends GameScreen{
 	@Override
 	public void setupEntities() {
 		
-		var healthText = new HealthText(new Coordinate2D((getWidth() / 3), 0));
-		healthText.setAnchorPoint(AnchorPoint.TOP_CENTER);
+		var healthText = new HealthText(new Coordinate2D(0, 0));
+		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
 		addEntity(healthText);
 		
 		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda);

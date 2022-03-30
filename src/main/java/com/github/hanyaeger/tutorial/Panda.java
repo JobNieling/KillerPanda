@@ -19,7 +19,7 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	private int health = 9;
 
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda) {
-		super("sprites/hanny.png", initialLocation, new Size(20, 40), 1, 2);
+		super("sprites/walkingPanda.png", initialLocation, new Size(40, 80), 1, 3);
 		
 		this.healthText = healthText;
 	    healthText.setHealthText(health);
@@ -64,11 +64,13 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.RIGHT)){
 	        setMotion(3,90d);
-	        setCurrentFrameIndex(1);
+	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.UP)){
 	        setMotion(3,180d);
+	        setCurrentFrameIndex(1);
 	    } else if(pressedKeys.contains(KeyCode.DOWN)){
 	        setMotion(3,0d);
+	        setCurrentFrameIndex(2);
 	    } 
 		
 	}
