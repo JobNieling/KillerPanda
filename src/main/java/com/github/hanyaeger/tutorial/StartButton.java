@@ -12,7 +12,7 @@ public class StartButton extends Button{
 
 	public StartButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Play Game", killerPanda);
-		setFill(Color.PURPLE);
+		setFill(Color.DARKRED);
 		setFont(Font.font("Roboto", FontWeight.BOLD, 30));
 	}
 
@@ -23,13 +23,13 @@ public class StartButton extends Button{
 
 	@Override
 	public void onMouseExited() {
-		setFill(Color.PURPLE);
+		setFill(Color.DARKRED);
 		setCursor(Cursor.DEFAULT);
 	}
 
 	@Override
 	public void onMouseEntered() {
-		setFill(Color.VIOLET);
+		setFill(Color.RED);
 		setCursor(Cursor.HAND);
 	}
 
