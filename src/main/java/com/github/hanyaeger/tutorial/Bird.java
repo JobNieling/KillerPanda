@@ -5,8 +5,8 @@ import com.github.hanyaeger.api.Size;
 
 public class Bird extends Animal{
 
-	protected Bird(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
-		super(resource, initialLocation, size, rows, columns);
+	protected Bird(Coordinate2D initialLocation) {
+		super("sprites/bird.png", initialLocation, new Size(100, 50), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 
