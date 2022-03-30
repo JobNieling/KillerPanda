@@ -5,8 +5,8 @@ import com.github.hanyaeger.api.Size;
 
 public class Turtle extends Animal{
 
-	protected Turtle(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
-		super(resource, initialLocation, size, rows, columns);
+	protected Turtle(Coordinate2D initialLocation) {
+		super("sprites/turtle.png", initialLocation, new Size(100, 50), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 

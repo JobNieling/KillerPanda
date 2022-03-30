@@ -25,6 +25,9 @@ public class Farm extends GameScreen{
 		var bird = new Bird(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(bird);
 		
+		var turtle = new Turtle(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		addEntity(turtle);
+		
 		 var healthText = new HealthText(new Coordinate2D(0, 0));
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
 		addEntity(healthText);
