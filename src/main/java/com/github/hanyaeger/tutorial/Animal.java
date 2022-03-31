@@ -12,10 +12,8 @@ public abstract class Animal extends Character implements Collided, Collider{
 	public int lives;
 	public long startTime = System.currentTimeMillis();
 	
-	protected Animal(String resource, Coordinate2D initialLocation, Size size, int rows, int columns, int lives) {
+	protected Animal(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
 		super(resource, initialLocation, size, rows, columns);
-		
-		this.lives = lives;
 	}
 
 	@Override
@@ -54,8 +52,14 @@ public abstract class Animal extends Character implements Collided, Collider{
 	        }
 	}
 	
-	public abstract void action() ;
+	public void setLives(int health) {
+		this.lives = health;
+	}
 	
-	public abstract void setLives() ;
+	public int getLives() {
+		return lives;
+	}
+	
+	public abstract void action() ;
 
 }
