@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Bird extends Animal{
 
 	protected Bird(Coordinate2D initialLocation) {
-		super("sprites/bird.png", initialLocation, new Size(60, 30), 1, 1);
+		super("sprites/bird.png", initialLocation, new Size(60, 30), 1, 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -17,8 +17,7 @@ public class Bird extends Animal{
 
 	@Override
 	public void setLives() {
-		// TODO Auto-generated method stub
-		
+		int lives = 1;
 	}
 	
 	public void teleport() {

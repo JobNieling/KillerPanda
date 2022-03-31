@@ -1,5 +1,6 @@
 package com.github.hanyaeger.tutorial;
 
+import java.util.Random;
 import java.util.Set;
 
 import com.github.hanyaeger.api.Coordinate2D;
@@ -18,19 +19,21 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	private HealthText healthText;
 	private int health = 9;
 	
-	private AnimalsKilledText animalsKilledText;
-	private int animalsKilled = 0;
+	private PointsText pointsText;
+	private int points = 0;
 	
 	private Weapon weapon;
+	
+	public long startTime = System.currentTimeMillis();
 
-	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, AnimalsKilledText animalsKilledText) {
+	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, PointsText pointsText) {
 		super("sprites/walkingPanda.png", initialLocation, new Size(40, 80), 1, 3);
 		
 		this.healthText = healthText;
 	    healthText.setHealthText(health);
 	    
-	    this.animalsKilledText = animalsKilledText;
-	    animalsKilledText.setText(animalsKilled);
+	    this.pointsText = pointsText;
+	    pointsText.setText(points);
 	    
 	    this.killerPanda = killerPanda;
 	}
@@ -58,14 +61,21 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 
 	@Override
 	public void onCollision(Collider collidingObject) {
+		if (collidingObject instanceof Animal && (System.currentTimeMillis() - startTime) > 1000){
+	        points++;
+	        startTime = System.currentTimeMillis();
+		}
+		if (collidingObject instanceof Farmer) {
+			health--;
+			setAnchorLocation(
+			        new Coordinate2D(new Random().nextInt((int)(getSceneWidth() - getWidth())),
+			        new Random().nextInt((int)(getSceneHeight() - getHeight()))));
+		}
 		if (health == 0) {
 			killerPanda.setActiveScene(2);
 		}
-		if (collidingObject instanceof Animal){
-	        animalsKilled++;
-		}
 		healthText.setHealthText(health);
-		animalsKilledText.setText(animalsKilled);
+		pointsText.setText(points);
 		
 	}
 

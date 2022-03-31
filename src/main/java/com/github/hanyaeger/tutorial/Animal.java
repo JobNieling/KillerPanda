@@ -10,18 +10,25 @@ import com.github.hanyaeger.api.scenes.SceneBorder;
 public abstract class Animal extends Character implements Collided, Collider{ 
 
 	public int lives;
+	public long startTime = System.currentTimeMillis();
 	
-	protected Animal(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
+	protected Animal(String resource, Coordinate2D initialLocation, Size size, int rows, int columns, int lives) {
 		super(resource, initialLocation, size, rows, columns);
+		
+		this.lives = lives;
 	}
 
 	@Override
 	public void onCollision(Collider collidingObject) {
-		lives--;
-		if(collidingObject instanceof Panda) {
-			var popSound = new SoundClip("audio/stab.mp3");
-			popSound.play();
-
+		if(collidingObject instanceof Panda && (System.currentTimeMillis() - startTime) > 1000) {
+				lives--;
+				startTime = System.currentTimeMillis();
+				System.out.println(lives);
+			}
+		if(lives == 0) {
+			var stabSound = new SoundClip("audio/stab.mp3");
+			stabSound.play();
+			
 			remove();
 		}
 	}

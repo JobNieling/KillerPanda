@@ -7,17 +7,17 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class AnimalsKilledText extends TextEntity{
+public class PointsText extends TextEntity{
 
-	public AnimalsKilledText(Coordinate2D initialLocation) {
+	public PointsText(Coordinate2D initialLocation) {
 		super(initialLocation);
 
 		setFont(Font.font("Roboto", FontWeight.NORMAL, 30));
 		setFill(Color.BLACK);
 	}
 	
-	public void setText(int animalsKilled) {
-		setText("Animals Killed: " + animalsKilled);
+	public void setText(int points) {
+		setText("Points: " + points);
 	}
 
 }

@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Turtle extends Animal{
 
 	protected Turtle(Coordinate2D initialLocation) {
-		super("sprites/turtle.png", initialLocation, new Size(75, 35), 1, 1);
+		super("sprites/turtle.png", initialLocation, new Size(75, 35), 1, 1, 2);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -17,8 +17,7 @@ public class Turtle extends Animal{
 
 	@Override
 	public void setLives() {
-		// TODO Auto-generated method stub
-		
+		 int lives = 2;
 	}
 	
 	public void hide() {

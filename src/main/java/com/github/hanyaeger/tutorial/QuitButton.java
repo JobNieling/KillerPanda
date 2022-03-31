@@ -12,7 +12,7 @@ public class QuitButton extends Button{
 
 	public QuitButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Quit", killerPanda);
-		setFill(Color.DARKRED);
+		setFill(Color.WHITE);
 		setFont(Font.font("Roboto", FontWeight.BOLD, 30));
 	}
 
@@ -23,7 +23,7 @@ public class QuitButton extends Button{
 
 	@Override
 	public void onMouseExited() {
-		setFill(Color.DARKRED);
+		setFill(Color.WHITE);
 		setCursor(Cursor.DEFAULT);
 	}
 

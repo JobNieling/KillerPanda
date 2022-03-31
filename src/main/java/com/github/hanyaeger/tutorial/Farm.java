@@ -20,35 +20,21 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 	@Override
 	public void setupEntities() {
 		
-		/*
-		var cow = new Cow(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(cow);
-		
-		var bird = new Bird(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(bird);
-		
-		var turtle = new Turtle(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(turtle);
-		*/
-		
-		var baby = new Baby(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(baby);
-		
 		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(farmer);
 		
 		var knife = new Knife(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(knife);
 		
-		 var healthText = new HealthText(new Coordinate2D(0, 0));
+		var healthText = new HealthText(new Coordinate2D(0, 0));
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
 		addEntity(healthText);
 		
-		var animalsKilledText = new AnimalsKilledText(new Coordinate2D(getWidth(), 0));
-		animalsKilledText.setAnchorPoint(AnchorPoint.TOP_RIGHT);
-		addEntity(animalsKilledText);
+		var pointsText = new PointsText(new Coordinate2D(getWidth() / 2, 0));
+		pointsText.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+		addEntity(pointsText);
 		
-		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, animalsKilledText);
+		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, pointsText);
 		addEntity(Sebastian);
 		
 	}

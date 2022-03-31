@@ -19,6 +19,8 @@ public class KillerPanda extends YaegerGame{
 		public void setupScenes() {
 			addScene(0, new StartScreen(this));
 			addScene(1, new Farm(this));
+			addScene(2, new EndScreen(this));
+			addScene(3, new SettingsScreen(this));
 		}
 
 }
