@@ -18,13 +18,19 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	private HealthText healthText;
 	private int health = 9;
 	
+	private AnimalsKilledText animalsKilledText;
+	private int animalsKilled = 0;
+	
 	private Weapon weapon;
 
-	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda) {
+	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, AnimalsKilledText animalsKilledText) {
 		super("sprites/walkingPanda.png", initialLocation, new Size(40, 80), 1, 3);
 		
 		this.healthText = healthText;
 	    healthText.setHealthText(health);
+	    
+	    this.animalsKilledText = animalsKilledText;
+	    animalsKilledText.setText(animalsKilled);
 	    
 	    this.killerPanda = killerPanda;
 	}
@@ -52,10 +58,14 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 
 	@Override
 	public void onCollision(Collider collidingObject) {
-		healthText.setHealthText(health);
 		if (health == 0) {
 			killerPanda.setActiveScene(2);
 		}
+		if (collidingObject instanceof Animal){
+	        animalsKilled++;
+		}
+		healthText.setHealthText(health);
+		animalsKilledText.setText(animalsKilled);
 		
 	}
 

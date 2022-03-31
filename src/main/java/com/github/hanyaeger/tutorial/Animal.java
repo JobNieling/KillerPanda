@@ -7,7 +7,7 @@ import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
-public abstract class Animal extends Character implements Collided{ 
+public abstract class Animal extends Character implements Collided, Collider{ 
 
 	public int lives;
 	
@@ -19,7 +19,7 @@ public abstract class Animal extends Character implements Collided{
 	public void onCollision(Collider collidingObject) {
 		lives--;
 		if(collidingObject instanceof Panda) {
-			var popSound = new SoundClip("audio/pop.mp3");
+			var popSound = new SoundClip("audio/stab.mp3");
 			popSound.play();
 
 			remove();

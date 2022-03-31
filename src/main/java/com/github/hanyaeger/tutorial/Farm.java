@@ -44,7 +44,11 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
 		addEntity(healthText);
 		
-		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda);
+		var animalsKilledText = new AnimalsKilledText(new Coordinate2D(getWidth(), 0));
+		animalsKilledText.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+		addEntity(animalsKilledText);
+		
+		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, animalsKilledText);
 		addEntity(Sebastian);
 		
 	}
