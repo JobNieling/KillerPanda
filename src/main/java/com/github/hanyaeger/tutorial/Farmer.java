@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Farmer extends Enemy{
 
 	protected Farmer(Coordinate2D initialLocation) {
-		super("", initialLocation, new Size(100, 50), 1, 1);
+		super("sprites/farmer.png", initialLocation, new Size(60, 120), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 

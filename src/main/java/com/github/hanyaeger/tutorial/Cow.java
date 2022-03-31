@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Cow extends Animal{
 
 	protected Cow(Coordinate2D initialLocation) {
-		super("sprites/cow_finished.png", initialLocation, new Size(200, 100), 1, 1);
+		super("sprites/cow_finished.png", initialLocation, new Size(120, 60), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 

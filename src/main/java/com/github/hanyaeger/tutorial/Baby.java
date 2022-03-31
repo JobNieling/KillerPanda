@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Baby extends Enemy{
 
 	protected Baby(Coordinate2D initialLocation) {
-		super("", initialLocation, new Size(100, 50), 1, 1);
+		super("sprites/baby.png", initialLocation, new Size(35, 70), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 

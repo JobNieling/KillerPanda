@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.Size;
 public class Knife extends Weapon{
 
 	protected Knife(Coordinate2D location) {
-		super("", location, new Size(40, 80), 1, 1);
+		super("sprites/bloodyKnife.png", location, new Size(40, 80), 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 

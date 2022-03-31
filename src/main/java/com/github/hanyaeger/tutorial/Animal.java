@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
 public abstract class Animal extends Character implements Collided{ 
@@ -17,7 +18,12 @@ public abstract class Animal extends Character implements Collided{
 	@Override
 	public void onCollision(Collider collidingObject) {
 		lives--;
-		
+		if(collidingObject instanceof Panda) {
+			var popSound = new SoundClip("audio/pop.mp3");
+			popSound.play();
+
+			remove();
+		}
 	}
 
 	@Override
