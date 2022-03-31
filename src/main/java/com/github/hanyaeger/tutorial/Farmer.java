@@ -27,16 +27,16 @@ public class Farmer extends Enemy implements KeyListener{
 	@Override
 	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
 		if(pressedKeys.contains(KeyCode.A)){
-	        setMotion(3,270d);
+	        setMotion(2,270d);
 	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.D)){
-	        setMotion(3,90d);
+	        setMotion(2,90d);
 	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.W)){
-	        setMotion(3,180d);
+	        setMotion(2,180d);
 	        setCurrentFrameIndex(1);
 	    } else if(pressedKeys.contains(KeyCode.S)){
-	        setMotion(3,0d);
+	        setMotion(2,0d);
 	        setCurrentFrameIndex(2);
 	    } 
 	}
