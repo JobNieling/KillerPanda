@@ -6,12 +6,12 @@ import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 
 import javafx.scene.paint.Color;
 
-public class HitBox extends RectangleEntity implements Collider {
+public class FarmerHitBox extends RectangleEntity implements Collider {
 
-    public HitBox(final Coordinate2D initialPosition) {
+    public FarmerHitBox(final Coordinate2D initialPosition) {
         super(initialPosition);
-        setWidth(60);
-        setHeight(2);
-        setFill(Color.RED);
+        setWidth(5);
+        setHeight(35);
+        setFill(Color.TRANSPARENT);
     }
 }

@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.Set;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
@@ -12,7 +11,7 @@ import com.github.hanyaeger.api.userinput.KeyListener;
 
 import javafx.scene.input.KeyCode;
 
-public class Panda extends Character implements KeyListener, Collider, Collided{
+public class Panda extends Character2 implements KeyListener, Collided{
 	
 	KillerPanda killerPanda;
 	
@@ -27,7 +26,7 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	public long startTime = System.currentTimeMillis();
 
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, PointsText pointsText) {
-		super("sprites/walkingPanda.png", initialLocation, new Size(40, 80), 1, 3);
+		super(initialLocation);
 		
 		this.healthText = healthText;
 	    healthText.setHealthText(health);
@@ -65,7 +64,7 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	        points++;
 	        startTime = System.currentTimeMillis();
 		}
-		if (collidingObject instanceof Farmer) {
+		if (collidingObject instanceof FarmerHitBox) {
 			health--;
 			setAnchorLocation(
 			        new Coordinate2D(new Random().nextInt((int)(getSceneWidth() - getWidth())),
@@ -83,18 +82,30 @@ public class Panda extends Character implements KeyListener, Collider, Collided{
 	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
 		if(pressedKeys.contains(KeyCode.LEFT)){
 	        setMotion(3,270d);
-	        setCurrentFrameIndex(0);
+	        //setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.RIGHT)){
 	        setMotion(3,90d);
-	        setCurrentFrameIndex(0);
+	        //setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.UP)){
 	        setMotion(3,180d);
-	        setCurrentFrameIndex(1);
+	        //setCurrentFrameIndex(1);
 	    } else if(pressedKeys.contains(KeyCode.DOWN)){
 	        setMotion(3,0d);
-	        setCurrentFrameIndex(2);
+	        //setCurrentFrameIndex(2);
 	    } 
 		
+	}
+
+	@Override
+	protected void setupEntities() {
+		var pandaSprite = new PandaSprite(new Coordinate2D(0, 0));
+		addEntity(pandaSprite);
+		
+		var knife = new Knife(new Coordinate2D(25, 15));
+		addEntity(knife);
+		
+		var hitBox = new PandaHitBox(new Coordinate2D(0, 30));
+		addEntity(hitBox);
 	}
 
 }

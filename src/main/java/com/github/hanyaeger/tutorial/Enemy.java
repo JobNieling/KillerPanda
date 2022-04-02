@@ -5,11 +5,10 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
-public abstract class Enemy extends Character implements Collider{
+public abstract class Enemy extends Character2{
 
-	protected Enemy(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
-		super(resource, initialLocation, size, rows, columns);
-		// TODO Auto-generated constructor stub
+	protected Enemy(Coordinate2D initialLocation) {
+		super(initialLocation);
 	}
 
 	@Override

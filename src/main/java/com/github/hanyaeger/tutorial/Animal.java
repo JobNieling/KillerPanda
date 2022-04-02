@@ -18,7 +18,7 @@ public abstract class Animal extends Character implements Collided, Collider{
 
 	@Override
 	public void onCollision(Collider collidingObject) {
-		if(collidingObject instanceof Panda && (System.currentTimeMillis() - startTime) > 1000) {
+		if(collidingObject instanceof PandaHitBox && (System.currentTimeMillis() - startTime) > 1000) {
 				lives--;
 				startTime = System.currentTimeMillis();
 				System.out.println(lives);

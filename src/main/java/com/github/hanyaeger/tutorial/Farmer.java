@@ -11,8 +11,7 @@ import javafx.scene.input.KeyCode;
 public class Farmer extends Enemy implements KeyListener{
 
 	protected Farmer(Coordinate2D initialLocation) {
-		super("sprites/farmer.png", initialLocation, new Size(60, 120), 1, 1);
-		// TODO Auto-generated constructor stub
+		super(initialLocation);
 	}
 
 	@Override
@@ -28,17 +27,25 @@ public class Farmer extends Enemy implements KeyListener{
 	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
 		if(pressedKeys.contains(KeyCode.A)){
 	        setMotion(2,270d);
-	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.D)){
 	        setMotion(2,90d);
-	        setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.W)){
 	        setMotion(2,180d);
-	        setCurrentFrameIndex(1);
 	    } else if(pressedKeys.contains(KeyCode.S)){
 	        setMotion(2,0d);
-	        setCurrentFrameIndex(2);
 	    } 
+	}
+
+	@Override
+	protected void setupEntities() {
+		var farmerSprite = new FarmerSprite(new Coordinate2D(0, 0));
+		addEntity(farmerSprite);
+		
+		var hitBox = new FarmerHitBox(new Coordinate2D(0, 30));
+		addEntity(hitBox);
+		
+		var hitBox2 = new FarmerHitBox(new Coordinate2D(52, 20));
+		addEntity(hitBox2);
 	}
 
 }
