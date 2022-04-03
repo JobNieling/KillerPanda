@@ -19,7 +19,7 @@ public class StartScreen extends StaticScene{
 
 	@Override
 	public void setupScene() {
-		setBackgroundAudio("audio/Jim Walter - Choose Your Character The original - YouTube.mp4");
+		setBackgroundAudio("audio/Kim7.m4a");
 		setBackgroundImage("backgrounds/panda.jpg");
 	}
 

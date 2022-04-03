@@ -20,6 +20,7 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 
 	@Override
 	public void setupScene() {
+		setBackgroundAudio("audio/Kim7.m4a");
 		setBackgroundImage("backgrounds/panda_world_xl.png");
 	}
 
