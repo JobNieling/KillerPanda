@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Character.Enemy.Farmer;
 
 import java.util.Set;
 
@@ -6,11 +6,12 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.userinput.KeyListener;
 
+import Character.Enemy.Enemy;
 import javafx.scene.input.KeyCode;
 
 public class Farmer extends Enemy implements KeyListener{
 
-	protected Farmer(Coordinate2D initialLocation) {
+	public Farmer(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
 

@@ -6,6 +6,10 @@ import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
 
+import Character.Animal.Spawner.AnimalSpawner;
+import Character.Enemy.Farmer.Farmer;
+import Character.Panda.Panda;
+
 public class Farm extends GameScreen implements EntitySpawnerContainer{
 
 	Farm(KillerPanda killerPanda) {

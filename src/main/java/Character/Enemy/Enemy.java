@@ -1,11 +1,13 @@
-package com.github.hanyaeger.tutorial;
+package Character.Enemy;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
-public abstract class Enemy extends Character2{
+import Character.Character;
+
+public abstract class Enemy extends Character{
 
 	protected Enemy(Coordinate2D initialLocation) {
 		super(initialLocation);

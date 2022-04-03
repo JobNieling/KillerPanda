@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Character.Enemy.Farmer;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;

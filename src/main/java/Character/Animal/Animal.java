@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Character.Animal;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
@@ -7,13 +7,16 @@ import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
+import Character.Character;
+import Character.Panda.PandaHitBox;
+
 public abstract class Animal extends Character implements Collided, Collider{ 
 
 	public int lives;
 	public long startTime = System.currentTimeMillis();
 	
-	protected Animal(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
-		super(resource, initialLocation, size, rows, columns);
+	protected Animal(Coordinate2D initialLocation) {
+		super(initialLocation);
 	}
 
 	@Override

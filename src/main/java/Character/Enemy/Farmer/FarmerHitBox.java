@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Character.Enemy.Farmer;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collider;
@@ -6,12 +6,12 @@ import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 
 import javafx.scene.paint.Color;
 
-public class PandaHitBox extends RectangleEntity implements Collider {
+public class FarmerHitBox extends RectangleEntity implements Collider {
 
-    public PandaHitBox(final Coordinate2D initialPosition) {
+    public FarmerHitBox(final Coordinate2D initialPosition) {
         super(initialPosition);
-        setWidth(60);
-        setHeight(2);
+        setWidth(5);
+        setHeight(35);
         setFill(Color.TRANSPARENT);
     }
 }

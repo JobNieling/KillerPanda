@@ -1,9 +1,13 @@
-package com.github.hanyaeger.tutorial;
+package Character.Animal.Spawner;
 
 import java.util.Random;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.EntitySpawner;
+
+import Character.Animal.Bird.Bird;
+import Character.Animal.Cow.Cow;
+import Character.Animal.Turtle.Turtle;
 
 public class AnimalSpawner extends EntitySpawner{
 	

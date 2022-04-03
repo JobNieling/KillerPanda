@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Character.Panda;
 
 import java.util.Random;
 import java.util.Set;
@@ -8,10 +8,17 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.HealthText;
+import com.github.hanyaeger.tutorial.KillerPanda;
+import com.github.hanyaeger.tutorial.PointsText;
 
+import Character.Character;
+import Character.Animal.Animal;
+import Character.Animal.Cow.Cow;
+import Character.Enemy.Farmer.FarmerHitBox;
 import javafx.scene.input.KeyCode;
 
-public class Panda extends Character2 implements KeyListener, Collided{
+public class Panda extends Character implements KeyListener, Collided{
 	
 	KillerPanda killerPanda;
 	
@@ -20,8 +27,6 @@ public class Panda extends Character2 implements KeyListener, Collided{
 	
 	private PointsText pointsText;
 	private int points = 0;
-	
-	private Weapon weapon;
 	
 	public long startTime = System.currentTimeMillis();
 
@@ -63,6 +68,7 @@ public class Panda extends Character2 implements KeyListener, Collided{
 		if (collidingObject instanceof Animal && (System.currentTimeMillis() - startTime) > 1000){
 	        points++;
 	        startTime = System.currentTimeMillis();
+	        System.out.println(points);
 		}
 		if (collidingObject instanceof FarmerHitBox) {
 			health--;
