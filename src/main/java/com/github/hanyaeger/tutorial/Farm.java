@@ -12,7 +12,7 @@ import Character.Panda.Panda;
 
 public class Farm extends GameScreen implements EntitySpawnerContainer{
 
-	private PointsText pointsText;
+	//private PointsText pointsText;
 	
 	Farm(KillerPanda killerPanda) {
 		super(killerPanda);
@@ -35,7 +35,7 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 		
 		var pointsText = new PointsText(new Coordinate2D(getWidth() / 2, 0));
 		pointsText.setAnchorPoint(AnchorPoint.TOP_RIGHT);
-		this.pointsText = pointsText;
+		//this.pointsText = pointsText;
 		addEntity(pointsText);
 		
 		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, pointsText);

@@ -1,10 +1,8 @@
 package Character.Animal.Turtle;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.Size;
 
 import Character.Animal.Animal;
-import Character.Panda.PandaSprite;
 
 public class Turtle extends Animal{
 	

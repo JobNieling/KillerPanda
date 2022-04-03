@@ -1,10 +1,8 @@
 package Character.Enemy.Baby;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.Size;
 
 import Character.Enemy.Enemy;
-import Character.Panda.PandaSprite;
 
 public class Baby extends Enemy{
 

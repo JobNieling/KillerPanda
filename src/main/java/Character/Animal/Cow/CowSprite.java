@@ -4,8 +4,6 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
-import Character.Animal.AnimalSprite;
-
 public class CowSprite extends SpriteEntity{
 
 	public CowSprite(Coordinate2D initialLocation) {

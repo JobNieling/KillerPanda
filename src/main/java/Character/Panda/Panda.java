@@ -14,9 +14,6 @@ import com.github.hanyaeger.tutorial.PointsText;
 
 import Character.Character;
 import Character.Animal.Animal;
-import Character.Animal.AnimalSprite;
-import Character.Animal.Cow.Cow;
-import Character.Animal.Cow.CowHitBox;
 import Character.Enemy.Farmer.FarmerHitBox;
 import javafx.scene.input.KeyCode;
 
