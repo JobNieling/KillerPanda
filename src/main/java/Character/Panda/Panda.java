@@ -14,11 +14,13 @@ import com.github.hanyaeger.tutorial.PointsText;
 
 import Character.Character;
 import Character.Animal.Animal;
+import Character.Animal.AnimalSprite;
 import Character.Animal.Cow.Cow;
+import Character.Animal.Cow.CowHitBox;
 import Character.Enemy.Farmer.FarmerHitBox;
 import javafx.scene.input.KeyCode;
 
-public class Panda extends Character implements KeyListener, Collided{
+public class Panda extends Character implements KeyListener, Collided, Collider{
 	
 	KillerPanda killerPanda;
 	
@@ -65,6 +67,7 @@ public class Panda extends Character implements KeyListener, Collided{
 
 	@Override
 	public void onCollision(Collider collidingObject) {
+		System.out.println(collidingObject);
 		if (collidingObject instanceof Animal && (System.currentTimeMillis() - startTime) > 1000){
 	        points++;
 	        startTime = System.currentTimeMillis();
@@ -104,14 +107,13 @@ public class Panda extends Character implements KeyListener, Collided{
 
 	@Override
 	protected void setupEntities() {
+		
 		var pandaSprite = new PandaSprite(new Coordinate2D(0, 0));
 		addEntity(pandaSprite);
 		
 		var knife = new Knife(new Coordinate2D(25, 15));
 		addEntity(knife);
-		
-		var hitBox = new PandaHitBox(new Coordinate2D(0, 30));
-		addEntity(hitBox);
+
 	}
 
 }

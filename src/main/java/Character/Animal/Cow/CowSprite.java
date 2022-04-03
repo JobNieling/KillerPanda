@@ -6,9 +6,9 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
 import Character.Animal.AnimalSprite;
 
-public class CowSprite extends AnimalSprite{
+public class CowSprite extends SpriteEntity{
 
-	protected CowSprite(Coordinate2D initialLocation) {
+	public CowSprite(Coordinate2D initialLocation) {
 		super("sprites/cow_finished.png", initialLocation, new Size(120, 60), 1, 1);
 	}
 

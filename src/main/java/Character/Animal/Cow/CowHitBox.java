@@ -8,10 +8,10 @@ import javafx.scene.paint.Color;
 
 public class CowHitBox extends RectangleEntity implements Collider{
 
-	public CowHitBox(Coordinate2D initialLocation) {
-		super(initialLocation);
+	public CowHitBox(final Coordinate2D initialPosition) {
+		super(initialPosition);
 		setWidth(60);
-        setHeight(2);
+        setHeight(60);
         setFill(Color.RED);
 	}
 

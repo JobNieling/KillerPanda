@@ -25,9 +25,6 @@ public class Cow extends Animal{
 	protected void setupEntities() {
 		var cowSprite = new CowSprite(new Coordinate2D(0, 0));
 		addEntity(cowSprite);
-		
-		var cowHitBox = new CowHitBox(new Coordinate2D(0, 0));
-		addEntity(cowHitBox);
 	}
 
 }

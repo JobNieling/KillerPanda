@@ -8,6 +8,8 @@ import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 
 import Character.Character;
+import Character.Panda.Knife;
+import Character.Panda.Panda;
 import Character.Panda.PandaHitBox;
 
 public abstract class Animal extends Character implements Collided, Collider{ 
@@ -15,16 +17,16 @@ public abstract class Animal extends Character implements Collided, Collider{
 	public int lives;
 	public long startTime = System.currentTimeMillis();
 	
-	protected Animal(Coordinate2D initialLocation) {
+	public Animal(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
 
 	@Override
 	public void onCollision(Collider collidingObject) {
-		if(collidingObject instanceof PandaHitBox && (System.currentTimeMillis() - startTime) > 1000) {
+		if(collidingObject instanceof Panda && (System.currentTimeMillis() - startTime) > 1000) {
 				lives--;
 				startTime = System.currentTimeMillis();
-				System.out.println(lives);
+				System.out.println(getLives());
 			}
 		if(lives == 0) {
 			var stabSound = new SoundClip("audio/stab.mp3");
