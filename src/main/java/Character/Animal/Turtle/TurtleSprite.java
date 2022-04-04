@@ -7,7 +7,7 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 public class TurtleSprite extends SpriteEntity{
 
 	protected TurtleSprite(Coordinate2D location) {
-		super("sprites/turtle.png", location, new Size(75, 35), 1, 1);
+		super("sprites/hidingTurtle2.png", location, new Size(75, 35), 1, 2);
 		// TODO Auto-generated constructor stub
 	}
 

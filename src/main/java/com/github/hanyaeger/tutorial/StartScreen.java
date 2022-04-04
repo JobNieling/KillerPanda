@@ -41,6 +41,13 @@ public class StartScreen extends StaticScene{
 		playGameButton.setAnchorPoint(AnchorPoint.TOP_CENTER);
 		addEntity(playGameButton);
 		
+		var settingsButton = new SettingsButton(
+				new Coordinate2D(getWidth() - 5, 0),
+				killerPanda
+		);
+		settingsButton.setAnchorPoint(AnchorPoint.TOP_RIGHT);
+		addEntity(settingsButton);
+		
 	}
 
 }
