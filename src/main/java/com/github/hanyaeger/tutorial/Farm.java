@@ -27,8 +27,8 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 	@Override
 	public void setupEntities() {
 		
-		//var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		//addEntity(farmer);
+		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		addEntity(farmer);
 		
 		var healthText = new HealthText(new Coordinate2D(0, 0));
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
@@ -40,9 +40,6 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 		
 		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, pointsText);
 		addEntity(Sebastian);
-		
-		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)), Sebastian);
-		addEntity(farmer);
 		
 	}
 

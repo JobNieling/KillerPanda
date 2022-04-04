@@ -8,21 +8,14 @@ import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.userinput.KeyListener;
 
 import Character.Enemy.Enemy;
-import Character.Panda.Panda;
 import javafx.scene.input.KeyCode;
 
 public class Farmer extends Enemy implements KeyListener, UpdateExposer{
 
 	public long startTime = 0;
 	
-	private Panda panda;
-	
-	public Farmer(Coordinate2D initialLocation, Panda panda) {
+	public Farmer(Coordinate2D initialLocation) {
 		super(initialLocation);
-		
-		this.panda = panda;
-		//setMotion(2, 270d);
-		//move();
 	}
 
 	@Override

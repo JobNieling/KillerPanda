@@ -28,6 +28,8 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	private int points = 0;
 	
 	public long startTime = System.currentTimeMillis();
+	
+	private PandaSprite pandaSprite;
 
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, PointsText pointsText) {
 		super(initialLocation);
@@ -86,16 +88,16 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
 		if(pressedKeys.contains(KeyCode.LEFT)){
 	        setMotion(3,270d);
-	        //setCurrentFrameIndex(0);
+	        pandaSprite.setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.RIGHT)){
 	        setMotion(3,90d);
-	        //setCurrentFrameIndex(0);
+	        pandaSprite.setCurrentFrameIndex(0);
 	    } else if(pressedKeys.contains(KeyCode.UP)){
 	        setMotion(3,180d);
-	        //setCurrentFrameIndex(1);
+	        pandaSprite.setCurrentFrameIndex(1);
 	    } else if(pressedKeys.contains(KeyCode.DOWN)){
 	        setMotion(3,0d);
-	        //setCurrentFrameIndex(2);
+	        pandaSprite.setCurrentFrameIndex(2);
 	    } 
 		
 	}
@@ -104,6 +106,7 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	protected void setupEntities() {
 		
 		var pandaSprite = new PandaSprite(new Coordinate2D(0, 0));
+		this.pandaSprite = pandaSprite;
 		addEntity(pandaSprite);
 		
 		var knife = new Knife(new Coordinate2D(25, 15));
