@@ -20,15 +20,15 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 
 	@Override
 	public void setupScene() {
-		setBackgroundAudio("audio/Kim7.m4a");
+		//setBackgroundAudio("audio/Kim7.m4a");
 		setBackgroundImage("backgrounds/panda_world_xl.png");
 	}
 
 	@Override
 	public void setupEntities() {
 		
-		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(farmer);
+		//var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		//addEntity(farmer);
 		
 		var healthText = new HealthText(new Coordinate2D(0, 0));
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);
@@ -36,11 +36,13 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 		
 		var pointsText = new PointsText(new Coordinate2D(getWidth() / 2, 0));
 		pointsText.setAnchorPoint(AnchorPoint.TOP_RIGHT);
-		//this.pointsText = pointsText;
 		addEntity(pointsText);
 		
 		var Sebastian = new Panda(new Coordinate2D(0, 0), healthText, killerPanda, pointsText);
 		addEntity(Sebastian);
+		
+		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)), Sebastian);
+		addEntity(farmer);
 		
 	}
 

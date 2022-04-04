@@ -6,10 +6,12 @@ import Character.Animal.Animal;
 
 public class Turtle extends Animal{
 	
+	private int lives = 2;
+	
 	public Turtle(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
-		setLives(2);
+		setLives(lives);
 	}
 
 	@Override

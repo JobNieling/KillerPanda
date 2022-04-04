@@ -1,6 +1,7 @@
 package Character.Animal;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.media.SoundClip;
@@ -9,10 +10,11 @@ import com.github.hanyaeger.api.scenes.SceneBorder;
 import Character.Character;
 import Character.Panda.Panda;
 
-public abstract class Animal extends Character implements Collided, Collider{ 
+public abstract class Animal extends Character implements Collided, Collider, UpdateExposer{ 
 
 	public int lives;
 	public long startTime = System.currentTimeMillis();
+	public long startTime2 = System.currentTimeMillis();
 	
 	public Animal(Coordinate2D initialLocation) {
 		super(initialLocation);
@@ -60,6 +62,15 @@ public abstract class Animal extends Character implements Collided, Collider{
 	
 	public int getLives() {
 		return lives;
+	}
+	
+	@Override
+	public void explicitUpdate(long timestamp) {
+		if((System.currentTimeMillis() - startTime) > 10000) {
+			action();
+			startTime = System.currentTimeMillis();
+			System.out.println("actie");
+		}
 	}
 	
 	public abstract void action() ;

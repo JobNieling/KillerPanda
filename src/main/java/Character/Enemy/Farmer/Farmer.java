@@ -4,18 +4,25 @@ import java.util.Random;
 import java.util.Set;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.userinput.KeyListener;
 
 import Character.Enemy.Enemy;
+import Character.Panda.Panda;
 import javafx.scene.input.KeyCode;
 
-public class Farmer extends Enemy implements KeyListener{
+public class Farmer extends Enemy implements KeyListener, UpdateExposer{
 
 	public long startTime = 0;
 	
-	public Farmer(Coordinate2D initialLocation) {
+	private Panda panda;
+	
+	public Farmer(Coordinate2D initialLocation, Panda panda) {
 		super(initialLocation);
+		
+		this.panda = panda;
 		//setMotion(2, 270d);
+		//move();
 	}
 
 	@Override
@@ -54,9 +61,9 @@ public class Farmer extends Enemy implements KeyListener{
 	
 	public void move() {
 		if((System.currentTimeMillis() - startTime) > 1000) {
-		if(new Random().nextInt(20) <= 5){
+		if(new Random().nextInt(20) < 5){
 	        setMotion(2,270d);
-	    } else if(new Random().nextInt(20) > 5 && new Random().nextInt(20) <= 10){
+	    } else if(new Random().nextInt(20) > 4 && new Random().nextInt(20) <= 10){
 	        setMotion(2,90d);
 	    } else if(new Random().nextInt(20) > 10 && new Random().nextInt(20) <= 15){
 	        setMotion(2,180d);
@@ -64,7 +71,12 @@ public class Farmer extends Enemy implements KeyListener{
 	        setMotion(2,0d);
 	    } 
 		startTime = System.currentTimeMillis();
-		}
+		}		
+	}
+
+	@Override
+	public void explicitUpdate(long timestamp) {
+		move();
 	}
 
 }

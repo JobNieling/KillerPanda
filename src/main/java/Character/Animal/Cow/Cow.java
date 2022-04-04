@@ -5,11 +5,13 @@ import com.github.hanyaeger.api.Coordinate2D;
 import Character.Animal.Animal;
 
 public class Cow extends Animal{
+	
+	private int lives = 5;
 
 	public Cow(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
-		setLives(5);
+		setLives(lives);
 	}
 
 	@Override
@@ -18,7 +20,9 @@ public class Cow extends Animal{
 	}
 	
 	public void healing() {
-		
+		if (getLives() < 5) {
+			setLives(getLives() + 1);
+		}
 	}
 
 	@Override

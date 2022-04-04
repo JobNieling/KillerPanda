@@ -64,11 +64,9 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 
 	@Override
 	public void onCollision(Collider collidingObject) {
-		System.out.println(collidingObject);
 		if (collidingObject instanceof Animal && (System.currentTimeMillis() - startTime) > 1000){
 	        points++;
 	        startTime = System.currentTimeMillis();
-	        System.out.println(points);
 		}
 		if (collidingObject instanceof FarmerHitBox) {
 			health--;
