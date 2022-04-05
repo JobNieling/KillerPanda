@@ -19,7 +19,7 @@ public class Cow extends Animal{
 		healing();
 	}
 	
-	public void healing() {
+	private void healing() {
 		if (getLives() < 5) {
 			setLives(getLives() + 1);
 		}

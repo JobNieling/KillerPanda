@@ -21,7 +21,7 @@ public class Bird extends Animal{
 		teleport();
 	}
 	
-	public void teleport() {
+	private void teleport() {
 		setAnchorLocation(
 		        new Coordinate2D(new Random().nextInt((int)(getSceneWidth() - getWidth())),
 		        new Random().nextInt((int)(getSceneHeight() - getHeight()))));
