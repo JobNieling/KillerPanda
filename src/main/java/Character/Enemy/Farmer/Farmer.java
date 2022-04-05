@@ -11,6 +11,10 @@ public class Farmer extends Enemy implements UpdateExposer{
 
 	public long startTime = 0;
 	
+	/**
+	 * Set the initial location of the farmer
+	 * @param initialLocation The initial location of the farmer
+	 */
 	public Farmer(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
@@ -27,6 +31,9 @@ public class Farmer extends Enemy implements UpdateExposer{
 		addEntity(hitBox2);
 	}
 	
+	/**
+	 * Use this to make sure the farmer moves its self in random directions so you can play on your own
+	 */
 	public void move() {
 		if((System.currentTimeMillis() - startTime) > 1000) {
 		if(new Random().nextInt(20) < 5){

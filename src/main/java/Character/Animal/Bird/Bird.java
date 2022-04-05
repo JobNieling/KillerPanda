@@ -10,6 +10,10 @@ public class Bird extends Animal{
 	
 	private int lives = 1;
 
+	/**
+	 * Set the initial location of the bird and the lives
+	 * @param initialLocation The initial location of the bird
+	 */
 	public Bird(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
@@ -21,6 +25,9 @@ public class Bird extends Animal{
 		teleport();
 	}
 	
+	/**
+	 * Use this method to make sure the bird is able to teleport as its action
+	 */
 	private void teleport() {
 		setAnchorLocation(
 		        new Coordinate2D(new Random().nextInt((int)(getSceneWidth() - getWidth())),

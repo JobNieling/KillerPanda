@@ -14,6 +14,11 @@ public class AnimalSpawner extends EntitySpawner{
 	private final double sceneWidth;
     private final double sceneHeight;
 
+    /**
+     * Set the width and height of the screen
+     * @param sceneWidth The width of the screen
+     * @param sceneHeight The height of the screen
+     */
     public AnimalSpawner(double sceneWidth, double sceneHeight) {
         super(7000);
         this.sceneWidth = sceneWidth;
@@ -34,6 +39,10 @@ public class AnimalSpawner extends EntitySpawner{
         }
     }
 
+    /**
+     * Return a random location somewhere on the screen
+     * @return The random location
+     */
     private Coordinate2D randomLocation() {
         double x = new Random().nextInt((int) sceneWidth - 200);
         double y = new Random().nextInt((int) sceneHeight - 100);

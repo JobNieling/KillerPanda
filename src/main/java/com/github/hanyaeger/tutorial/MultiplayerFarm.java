@@ -15,6 +15,10 @@ import Text.PointsText;
 
 public class MultiplayerFarm extends GameScreen implements EntitySpawnerContainer{
 	
+	/**
+	 * Set the main class in the multiplayer farm screen
+	 * @param killerPanda The main class
+	 */
 	public MultiplayerFarm(KillerPanda killerPanda) {
 		super(killerPanda);
 	}

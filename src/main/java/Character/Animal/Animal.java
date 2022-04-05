@@ -16,6 +16,10 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 	public long startTime = System.currentTimeMillis();
 	public long actionStartTime = System.currentTimeMillis();
 	
+	/**
+	 * Set the initial location of the Animal
+	 * @param initialLocation The initial location
+	 */
 	public Animal(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
@@ -56,10 +60,18 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 	        }
 	}
 	
+	/**
+	 * Set the lives of the animal
+	 * @param health The amount of lives
+	 */
 	public void setLives(int health) {
 		this.lives = health;
 	}
 	
+	/**
+	 * Return the amount of lives 
+	 * @return The amount of lives
+	 */
 	public int getLives() {
 		return lives;
 	}
@@ -73,6 +85,9 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 		}
 	}
 	
+	/**
+	 * Set the action the animal can do
+	 */
 	public abstract void action() ;
 
 }

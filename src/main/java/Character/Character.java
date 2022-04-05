@@ -7,6 +7,10 @@ import com.github.hanyaeger.api.scenes.SceneBorder;
 
 public abstract class Character extends DynamicCompositeEntity implements SceneBorderTouchingWatcher{
 
+	/**
+	 * Set the initial location of the character
+	 * @param initialLocation The initial location
+	 */
 	public Character(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}

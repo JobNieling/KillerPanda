@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 
 public class ReplayButton extends Button{
 
+	/**
+	 * Set the location and text for the replay button
+	 * @param initialLocation The location where the replay button is placed
+	 * @param killerPanda The main class
+	 */
 	public ReplayButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Replay", killerPanda);
 		setFill(Color.WHITE);

@@ -13,6 +13,11 @@ public class SingleplayerButton extends Button{
 	
 	public boolean singleplayer = false;
 
+	/**
+	 * Set the location and text for the singleplayer button
+	 * @param initialLocation The location where the singleplayer button is placed
+	 * @param killerPanda The main class
+	 */
 	public SingleplayerButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Singleplayer", killerPanda);
 		setFill(Color.BLACK);

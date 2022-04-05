@@ -10,6 +10,10 @@ public class Turtle extends Animal{
 	
 	private TurtleSprite turtleSprite;
 	
+	/**
+	 * Set the initial location of the turtle and the lives
+	 * @param initialLocation The initial location of the turtle
+	 */
 	public Turtle(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
@@ -26,7 +30,9 @@ public class Turtle extends Animal{
 		}
 	}
 
-	
+	/**
+	 * Use this method to make sure the turtle is able to hide as its action
+	 */
 	private void hide() {
 		turtleSprite.setCurrentFrameIndex(1);
 		setLives(100);

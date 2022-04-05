@@ -6,6 +6,10 @@ public abstract class GameScreen extends DynamicScene{
 	
 	KillerPanda killerPanda;
 	
+	/**
+	 * Set the main class in the Game Screen
+	 * @param killerPanda The main class
+	 */
 	GameScreen(KillerPanda killerPanda) {
 		this.killerPanda = killerPanda;
 	}

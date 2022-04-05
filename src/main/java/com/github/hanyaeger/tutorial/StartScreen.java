@@ -15,6 +15,10 @@ public class StartScreen extends StaticScene{
 	
 	private KillerPanda killerPanda;
 	
+	/**
+	 * Set the main class in the start screen
+	 * @param killerPanda the main class
+	 */
 	public StartScreen(KillerPanda killerPanda) {
 		this.killerPanda = killerPanda;
 	}

@@ -12,6 +12,10 @@ public class MultiplayerFarmer extends Enemy implements KeyListener{
 
 	public long startTime = 0;
 	
+	/**
+	 * Set the initial location of the multiplayer farmer
+	 * @param initialLocation The initial location
+	 */
 	public MultiplayerFarmer(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}

@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 
 public class QuitButton extends Button{
 
+	/**
+	 * Set the location and text for the quit button
+	 * @param initialLocation The location where the quit button is placed
+	 * @param killerPanda The main class
+	 */
 	public QuitButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Quit", killerPanda);
 		setFill(Color.WHITE);

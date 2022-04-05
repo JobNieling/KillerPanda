@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 
 public class MultiplayerButton extends Button{
 
+	/**
+	 * Set the location and text for the multiplayer button
+	 * @param initialLocation The location where the multiplayer button is placed
+	 * @param killerPanda The main class
+	 */
 	public MultiplayerButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Multiplayer", killerPanda);
 		setFill(Color.BLACK);

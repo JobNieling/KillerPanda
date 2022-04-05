@@ -13,6 +13,12 @@ public abstract class Button extends TextEntity implements MouseExitListener, Mo
 
 	KillerPanda killerPanda;
 	
+	/**
+	 * Set the location and text for the button
+	 * @param initialLocation The location where the button is placed
+	 * @param text The text that will be displayed in the button
+	 * @param killerPanda The main class
+	 */
 	public Button(Coordinate2D initialLocation, String text, KillerPanda killerPanda) {
 		super(initialLocation, text);
 		this.killerPanda = killerPanda;

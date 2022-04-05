@@ -16,6 +16,10 @@ public class EndScreen extends StaticScene{
 	
 	KillerPanda killerPanda;
 	
+	/**
+	 * Set the main class in the end screen
+	 * @param killerPanda The main class
+	 */
 	public EndScreen(KillerPanda killerPanda) {
 		this.killerPanda = killerPanda;
 	}

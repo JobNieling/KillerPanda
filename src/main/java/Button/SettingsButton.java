@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 
 public class SettingsButton extends Button{
 
+	/**
+	 * Set the location and text for the settings button
+	 * @param initialLocation The location where the settings button is placed
+	 * @param killerPanda The main class
+	 */
 	public SettingsButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Settings", killerPanda);
 		setFill(Color.DARKRED);

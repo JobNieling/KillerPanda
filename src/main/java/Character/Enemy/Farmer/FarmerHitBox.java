@@ -8,7 +8,11 @@ import javafx.scene.paint.Color;
 
 public class FarmerHitBox extends RectangleEntity implements Collider {
 
-    public FarmerHitBox(final Coordinate2D initialPosition) {
+    /**
+     * Set the initial position of the hitbox that's attached to the farmer
+     * @param initialPosition the initial position of the hitbox
+     */
+	public FarmerHitBox(final Coordinate2D initialPosition) {
         super(initialPosition);
         setWidth(5);
         setHeight(35);

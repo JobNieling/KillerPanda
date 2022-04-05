@@ -9,6 +9,10 @@ import javafx.scene.text.FontWeight;
 
 public class HealthText extends TextEntity{
 
+	/**
+	 * Set the location of the text with the health
+	 * @param initialLocation the location of the text
+	 */
 	public HealthText(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
@@ -16,6 +20,10 @@ public class HealthText extends TextEntity{
 		setFill(Color.DARKRED);
 	}
 	
+	/**
+	 * Set the amount of health
+	 * @param health The amount of health
+	 */
 	public void setHealthText(int health) {
 		setText("Health: " + health);
 	}

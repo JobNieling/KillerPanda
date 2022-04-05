@@ -15,6 +15,10 @@ public class SettingsScreen extends StaticScene{
 	
 	KillerPanda killerPanda;
 
+	/**
+	 * Set the main class in the settings screen
+	 * @param killerPanda the main class
+	 */
 	public SettingsScreen(KillerPanda killerPanda) {
 		this.killerPanda = killerPanda;
 	}

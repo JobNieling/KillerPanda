@@ -7,6 +7,10 @@ import Character.Enemy.Enemy;
 
 public class Baby extends Enemy implements Collider{
 
+	/**
+	 * Set the location of the baby
+	 * @param initialLocation the location of the baby
+	 */
 	public Baby(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}

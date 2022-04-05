@@ -9,6 +9,10 @@ import javafx.scene.text.FontWeight;
 
 public class PointsText extends TextEntity{
 
+	/**
+	 * Set the location of the text with the points
+	 * @param initialLocation The location of the text
+	 */
 	public PointsText(Coordinate2D initialLocation) {
 		super(initialLocation);
 
@@ -16,6 +20,10 @@ public class PointsText extends TextEntity{
 		setFill(Color.BLACK);
 	}
 	
+	/**
+	 * Set the amount of points
+	 * @param points The amount of points
+	 */
 	public void setText(int points) {
 		setText("Points: " + points);
 	}

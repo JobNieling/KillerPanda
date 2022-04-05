@@ -8,6 +8,10 @@ public class Cow extends Animal{
 	
 	private int lives = 5;
 
+	/**
+	 * Set the initial location of the cow and the lives
+	 * @param initialLocation The initial location of the cow
+	 */
 	public Cow(Coordinate2D initialLocation) {
 		super(initialLocation);
 		
@@ -19,6 +23,9 @@ public class Cow extends Animal{
 		healing();
 	}
 	
+	/**
+	 * Use this method to make sure the cow is able to heal as its action
+	 */
 	private void healing() {
 		if (getLives() < 5) {
 			setLives(getLives() + 1);

@@ -5,6 +5,10 @@ import com.github.hanyaeger.api.YaegerGame;
 
 public class KillerPanda extends YaegerGame{
 		
+		/**
+		 * Activate the Game engine?
+		 * @param args
+		 */
 		public static void main(String[] args) {
 			launch(args);
 		}

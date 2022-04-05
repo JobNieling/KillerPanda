@@ -11,6 +11,11 @@ import javafx.scene.text.FontWeight;
 
 public class StartButton extends Button{
 
+	/**
+	 * Set the location and text for the start button
+	 * @param initialLocation The location where the start button is placed
+	 * @param killerPanda The main class
+	 */
 	public StartButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
 		super(initialLocation, "Play Game", killerPanda);
 		setFill(Color.DARKRED);

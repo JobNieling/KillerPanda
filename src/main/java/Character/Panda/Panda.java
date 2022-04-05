@@ -36,6 +36,13 @@ public class Panda extends Character implements KeyListener, Collided, Collider,
 	
 	private boolean stunned = false;
 
+	/**
+	 * Set the initial location, the text for the health and the text for the points of the panda
+	 * @param initialLocation The initial location of the panda
+	 * @param healthText The text for the health of the panda
+	 * @param killerPanda The main class
+	 * @param pointsText The text for the health of the panda
+	 */
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, PointsText pointsText) {
 		super(initialLocation);
 		

@@ -7,6 +7,10 @@ import Character.Character;
 
 public abstract class Enemy extends Character{
 
+	/**
+	 * Set the initial location of the enemy
+	 * @param initialLocation The initial location
+	 */
 	public Enemy(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
