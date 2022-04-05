@@ -8,12 +8,12 @@ import com.github.hanyaeger.api.EntitySpawnerContainer;
 
 import Character.Animal.Spawner.AnimalSpawner;
 import Character.Enemy.Baby.Baby;
-import Character.Enemy.Farmer.Farmer;
+import Character.Enemy.Farmer.MultiplayerFarmer;
 import Character.Panda.Panda;
 
-public class Farm extends GameScreen implements EntitySpawnerContainer{
+public class MultiplayerFarm extends GameScreen implements EntitySpawnerContainer{
 	
-	Farm(KillerPanda killerPanda) {
+	MultiplayerFarm(KillerPanda killerPanda) {
 		super(killerPanda);
 	}
 
@@ -26,8 +26,8 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 	@Override
 	public void setupEntities() {
 		
-		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(farmer);
+		var multiplayerFarmer = new MultiplayerFarmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		addEntity(multiplayerFarmer);
 		
 		var baby = new Baby(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(baby);

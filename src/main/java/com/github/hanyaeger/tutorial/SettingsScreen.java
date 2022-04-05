@@ -42,12 +42,28 @@ public class SettingsScreen extends StaticScene{
 		playersText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 30));
 		addEntity(playersText);
 		
-		var playGameButton = new StartButton(
-				new Coordinate2D(getWidth() / 2 ,getHeight() - 30),
+		var singleplayerButton = new SingleplayerButton(
+				new Coordinate2D((getWidth() / 5) * 2 ,getHeight() / 5),
 				killerPanda
 		);
-		playGameButton.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
-		addEntity(playGameButton);
+		singleplayerButton.setAnchorPoint(AnchorPoint.TOP_CENTER);
+		addEntity(singleplayerButton);
+		
+		var slashText = new TextEntity(
+				new Coordinate2D((getWidth() / 5) * 3, getHeight() / 5),
+				"/"
+		);
+		slashText.setAnchorPoint(AnchorPoint.TOP_CENTER);
+		slashText.setFill(Color.BLACK);
+		slashText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 30));
+		addEntity(slashText);
+		
+		var multiplayerButton = new MultiplayerButton(
+				new Coordinate2D((getWidth() / 5) * 4 ,getHeight() / 5),
+				killerPanda
+		);
+		multiplayerButton.setAnchorPoint(AnchorPoint.TOP_CENTER);
+		addEntity(multiplayerButton);
 	}
 
 }

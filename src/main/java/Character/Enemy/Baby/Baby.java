@@ -12,15 +12,6 @@ public class Baby extends Enemy implements Collider{
 	}
 
 	@Override
-	public void action() {
-		distraction();
-	}
-	
-	public void distraction() {
-		
-	}
-
-	@Override
 	protected void setupEntities() {
 		var babySprite = new BabySprite(new Coordinate2D(0, 0));
 		addEntity(babySprite);

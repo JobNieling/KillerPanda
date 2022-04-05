@@ -31,7 +31,4 @@ public abstract class Enemy extends Character{
 	            break;
 	        }
 	}
-	
-	public abstract void action();
-
 }

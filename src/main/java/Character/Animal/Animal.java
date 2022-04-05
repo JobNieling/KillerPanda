@@ -14,7 +14,7 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 
 	public int lives;
 	public long startTime = System.currentTimeMillis();
-	public long startTime2 = System.currentTimeMillis();
+	public long actionStartTime = System.currentTimeMillis();
 	
 	public Animal(Coordinate2D initialLocation) {
 		super(initialLocation);
@@ -66,9 +66,9 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 	
 	@Override
 	public void explicitUpdate(long timestamp) {
-		if((System.currentTimeMillis() - startTime) > 10000) {
+		if((System.currentTimeMillis() - actionStartTime) > 10000) {
 			action();
-			startTime = System.currentTimeMillis();
+			actionStartTime = System.currentTimeMillis();
 			System.out.println("actie");
 		}
 	}

@@ -21,6 +21,7 @@ public class KillerPanda extends YaegerGame{
 			addScene(1, new Farm(this));
 			addScene(2, new EndScreen(this));
 			addScene(3, new SettingsScreen(this));
+			addScene(4, new MultiplayerFarm(this));
 		}
 
 }

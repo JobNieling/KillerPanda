@@ -1,43 +1,18 @@
 package Character.Enemy.Farmer;
 
 import java.util.Random;
-import java.util.Set;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.userinput.KeyListener;
 
 import Character.Enemy.Enemy;
-import javafx.scene.input.KeyCode;
 
-public class Farmer extends Enemy implements KeyListener, UpdateExposer{
+public class Farmer extends Enemy implements UpdateExposer{
 
 	public long startTime = 0;
 	
 	public Farmer(Coordinate2D initialLocation) {
 		super(initialLocation);
-	}
-
-	@Override
-	public void action() {
-		damage();
-	}
-	
-	public void damage() {
-		
-	}
-
-	@Override
-	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
-		if(pressedKeys.contains(KeyCode.A)){
-	        setMotion(2,270d);
-	    } else if(pressedKeys.contains(KeyCode.D)){
-	        setMotion(2,90d);
-	    } else if(pressedKeys.contains(KeyCode.W)){
-	        setMotion(2,180d);
-	    } else if(pressedKeys.contains(KeyCode.S)){
-	        setMotion(2,0d);
-	    } 
 	}
 
 	@Override
