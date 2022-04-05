@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
 
 import Character.Animal.Spawner.AnimalSpawner;
+import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.Farmer;
 import Character.Panda.Panda;
 
@@ -29,6 +30,9 @@ public class Farm extends GameScreen implements EntitySpawnerContainer{
 		
 		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(farmer);
+		
+		var baby = new Baby(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		addEntity(baby);
 		
 		var healthText = new HealthText(new Coordinate2D(0, 0));
 		healthText.setAnchorPoint(AnchorPoint.TOP_LEFT);

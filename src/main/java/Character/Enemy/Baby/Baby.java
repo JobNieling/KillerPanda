@@ -1,14 +1,14 @@
 package Character.Enemy.Baby;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.Collider;
 
 import Character.Enemy.Enemy;
 
-public class Baby extends Enemy{
+public class Baby extends Enemy implements Collider{
 
-	protected Baby(Coordinate2D initialLocation) {
+	public Baby(Coordinate2D initialLocation) {
 		super(initialLocation);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

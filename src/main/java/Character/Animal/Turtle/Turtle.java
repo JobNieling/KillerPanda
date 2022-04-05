@@ -29,7 +29,7 @@ public class Turtle extends Animal{
 	
 	public void hide() {
 		turtleSprite.setCurrentFrameIndex(1);
-		setLives(getLives() + 100);
+		setLives(100);
 	}
 
 	@Override

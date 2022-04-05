@@ -14,6 +14,7 @@ import com.github.hanyaeger.tutorial.PointsText;
 
 import Character.Character;
 import Character.Animal.Animal;
+import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.FarmerHitBox;
 import javafx.scene.input.KeyCode;
 
@@ -28,8 +29,11 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	private int points = 0;
 	
 	public long startTime = System.currentTimeMillis();
+	public long babyStartTime = 0;
 	
 	private PandaSprite pandaSprite;
+	
+	private boolean stunned = false;
 
 	public Panda(Coordinate2D initialLocation, HealthText healthText, KillerPanda killerPanda, PointsText pointsText) {
 		super(initialLocation);
@@ -77,6 +81,14 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 			        new Coordinate2D(new Random().nextInt((int)(getSceneWidth() - getWidth())),
 			        new Random().nextInt((int)(getSceneHeight() - getHeight()))));
 		}
+		if (collidingObject instanceof Baby && (System.currentTimeMillis() - babyStartTime) > 10000){
+			setMotion(0, 0d);
+	        stunned = true;
+	        babyStartTime = System.currentTimeMillis();
+		}
+		if((System.currentTimeMillis() - babyStartTime) > 4000) {
+			stunned = false;
+		}
 		if (health == 0) {
 			killerPanda.setActiveScene(2);
 		}
@@ -87,6 +99,7 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 
 	@Override
 	public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
+		if (stunned != true){
 		if(pressedKeys.contains(KeyCode.LEFT)){
 	        setMotion(3,270d);
 	        pandaSprite.setCurrentFrameIndex(0);
@@ -100,6 +113,7 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	        setMotion(3,0d);
 	        pandaSprite.setCurrentFrameIndex(2);
 	    } 
+		}
 		
 	}
 

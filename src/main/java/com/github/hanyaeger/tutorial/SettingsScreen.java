@@ -41,6 +41,13 @@ public class SettingsScreen extends StaticScene{
 		playersText.setFill(Color.BLACK);
 		playersText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 30));
 		addEntity(playersText);
+		
+		var playGameButton = new StartButton(
+				new Coordinate2D(getWidth() / 2 ,getHeight() - 30),
+				killerPanda
+		);
+		playGameButton.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
+		addEntity(playGameButton);
 	}
 
 }
