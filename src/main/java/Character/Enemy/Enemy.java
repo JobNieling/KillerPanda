@@ -7,7 +7,7 @@ import Character.Character;
 
 public abstract class Enemy extends Character{
 
-	protected Enemy(Coordinate2D initialLocation) {
+	public Enemy(Coordinate2D initialLocation) {
 		super(initialLocation);
 	}
 
