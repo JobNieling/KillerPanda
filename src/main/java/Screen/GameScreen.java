@@ -1,6 +1,8 @@
-package com.github.hanyaeger.tutorial;
+package Screen;
 
 import com.github.hanyaeger.api.scenes.DynamicScene;
+
+import KillerPanda.KillerPanda;
 
 public abstract class GameScreen extends DynamicScene{
 	

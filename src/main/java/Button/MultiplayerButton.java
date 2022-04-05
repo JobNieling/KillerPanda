@@ -1,8 +1,8 @@
 package Button;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.tutorial.KillerPanda;
 
+import KillerPanda.KillerPanda;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;

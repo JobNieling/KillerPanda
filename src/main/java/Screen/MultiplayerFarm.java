@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Screen;
 
 import java.util.Random;
 
@@ -8,26 +8,29 @@ import com.github.hanyaeger.api.EntitySpawnerContainer;
 
 import Character.Animal.Spawner.AnimalSpawner;
 import Character.Enemy.Baby.Baby;
-import Character.Enemy.Farmer.Farmer;
+import Character.Enemy.Farmer.MultiplayerFarmer;
 import Character.Panda.Panda;
+import KillerPanda.KillerPanda;
+import Text.HealthText;
+import Text.PointsText;
 
-public class Farm extends GameScreen implements EntitySpawnerContainer{
+public class MultiplayerFarm extends GameScreen implements EntitySpawnerContainer{
 	
-	Farm(KillerPanda killerPanda) {
+	public MultiplayerFarm(KillerPanda killerPanda) {
 		super(killerPanda);
 	}
 
 	@Override
 	public void setupScene() {
-		//setBackgroundAudio("audio/Kim7.m4a");
+		setBackgroundAudio("audio/Kim7.m4a");
 		setBackgroundImage("backgrounds/panda_world_xl.png");
 	}
 
 	@Override
 	public void setupEntities() {
 		
-		var farmer = new Farmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
-		addEntity(farmer);
+		var multiplayerFarmer = new MultiplayerFarmer(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
+		addEntity(multiplayerFarmer);
 		
 		var baby = new Baby(new Coordinate2D(new Random().nextInt((int) getWidth() - 81), new Random().nextInt((int) getHeight()- 81)));
 		addEntity(baby);

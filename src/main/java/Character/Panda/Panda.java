@@ -9,14 +9,14 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
-import com.github.hanyaeger.tutorial.HealthText;
-import com.github.hanyaeger.tutorial.KillerPanda;
-import com.github.hanyaeger.tutorial.PointsText;
 
 import Character.Character;
 import Character.Animal.Animal;
 import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.FarmerHitBox;
+import KillerPanda.KillerPanda;
+import Text.HealthText;
+import Text.PointsText;
 import javafx.scene.input.KeyCode;
 
 public class Panda extends Character implements KeyListener, Collided, Collider, UpdateExposer{

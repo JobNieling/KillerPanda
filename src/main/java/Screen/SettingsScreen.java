@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package Screen;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.scenes.StaticScene;
 
 import Button.MultiplayerButton;
 import Button.SingleplayerButton;
+import KillerPanda.KillerPanda;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;

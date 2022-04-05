@@ -5,8 +5,8 @@ import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.userinput.MouseEnterListener;
 import com.github.hanyaeger.api.userinput.MouseExitListener;
-import com.github.hanyaeger.tutorial.KillerPanda;
 
+import KillerPanda.KillerPanda;
 import javafx.scene.input.MouseButton;
 
 public abstract class Button extends TextEntity implements MouseExitListener, MouseButtonPressedListener, MouseEnterListener{
