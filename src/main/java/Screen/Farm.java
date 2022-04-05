@@ -5,12 +5,12 @@ import java.util.Random;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
+import com.github.hanyaeger.tutorial.KillerPanda;
 
 import Character.Animal.Spawner.AnimalSpawner;
 import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.Farmer;
 import Character.Panda.Panda;
-import KillerPanda.KillerPanda;
 import Text.HealthText;
 import Text.PointsText;
 

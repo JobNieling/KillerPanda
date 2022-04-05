@@ -1,4 +1,4 @@
-package KillerPanda;
+package com.github.hanyaeger.tutorial;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;

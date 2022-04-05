@@ -9,12 +9,12 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.KillerPanda;
 
 import Character.Character;
 import Character.Animal.Animal;
 import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.FarmerHitBox;
-import KillerPanda.KillerPanda;
 import Text.HealthText;
 import Text.PointsText;
 import javafx.scene.input.KeyCode;
