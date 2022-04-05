@@ -3,12 +3,6 @@ package com.github.hanyaeger.tutorial;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 
-import Screen.EndScreen;
-import Screen.Farm;
-import Screen.MultiplayerFarm;
-import Screen.SettingsScreen;
-import Screen.StartScreen;
-
 public class KillerPanda extends YaegerGame{
 		
 		public static void main(String[] args) {
