@@ -1,6 +1,7 @@
-package com.github.hanyaeger.tutorial;
+package Button;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.tutorial.KillerPanda;
 
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
@@ -8,13 +9,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class SingleplayerButton extends Button{
-	
-	public boolean singleplayer = false;
+public class StartButton extends Button{
 
-	public SingleplayerButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
-		super(initialLocation, "Singleplayer", killerPanda);
-		setFill(Color.BLACK);
+	public StartButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
+		super(initialLocation, "Play Game", killerPanda);
+		setFill(Color.DARKRED);
 		setFont(Font.font("Roboto", FontWeight.BOLD, 30));
 	}
 
@@ -25,15 +24,14 @@ public class SingleplayerButton extends Button{
 
 	@Override
 	public void onMouseExited() {
-		setFill(Color.BLACK);
+		setFill(Color.DARKRED);
 		setCursor(Cursor.DEFAULT);
 	}
 
 	@Override
 	public void onMouseEntered() {
-		setFill(Color.DARKRED);
+		setFill(Color.RED);
 		setCursor(Cursor.HAND);
 	}
-
 
 }

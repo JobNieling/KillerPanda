@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Set;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.SceneBorder;
@@ -18,7 +19,7 @@ import Character.Enemy.Baby.Baby;
 import Character.Enemy.Farmer.FarmerHitBox;
 import javafx.scene.input.KeyCode;
 
-public class Panda extends Character implements KeyListener, Collided, Collider{
+public class Panda extends Character implements KeyListener, Collided, Collider, UpdateExposer{
 	
 	KillerPanda killerPanda;
 	
@@ -86,9 +87,6 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 	        stunned = true;
 	        babyStartTime = System.currentTimeMillis();
 		}
-		if((System.currentTimeMillis() - babyStartTime) > 4000) {
-			stunned = false;
-		}
 		if (health == 0) {
 			killerPanda.setActiveScene(2);
 		}
@@ -127,6 +125,13 @@ public class Panda extends Character implements KeyListener, Collided, Collider{
 		var knife = new Knife(new Coordinate2D(25, 15));
 		addEntity(knife);
 
+	}
+
+	@Override
+	public void explicitUpdate(long timestamp) {
+		if((System.currentTimeMillis() - babyStartTime) > 4000) {
+			stunned = false;
+		}
 	}
 
 }

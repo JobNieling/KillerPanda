@@ -1,6 +1,7 @@
-package com.github.hanyaeger.tutorial;
+package Button;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.tutorial.KillerPanda;
 
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
@@ -8,30 +9,29 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class MultiplayerButton extends Button{
+public class QuitButton extends Button{
 
-	public MultiplayerButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
-		super(initialLocation, "Multiplayer", killerPanda);
-		setFill(Color.BLACK);
+	public QuitButton(Coordinate2D initialLocation, KillerPanda killerPanda) {
+		super(initialLocation, "Quit", killerPanda);
+		setFill(Color.WHITE);
 		setFont(Font.font("Roboto", FontWeight.BOLD, 30));
 	}
 
 	@Override
 	public void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2d) {
-		killerPanda.setActiveScene(4);
+		killerPanda.quit();
 	}
 
 	@Override
 	public void onMouseExited() {
-		setFill(Color.BLACK);
+		setFill(Color.WHITE);
 		setCursor(Cursor.DEFAULT);
 	}
 
 	@Override
 	public void onMouseEntered() {
-		setFill(Color.DARKRED);
+		setFill(Color.RED);
 		setCursor(Cursor.HAND);
 	}
-
 
 }
