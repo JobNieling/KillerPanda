@@ -29,7 +29,6 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 		if(collidingObject instanceof Panda && (System.currentTimeMillis() - startTime) > 1000) {
 				lives--;
 				startTime = System.currentTimeMillis();
-				System.out.println(getLives());
 			}
 		if(lives == 0) {
 			var stabSound = new SoundClip("audio/stab.mp3");
@@ -81,7 +80,6 @@ public abstract class Animal extends Character implements Collided, Collider, Up
 		if((System.currentTimeMillis() - actionStartTime) > 10000) {
 			action();
 			actionStartTime = System.currentTimeMillis();
-			System.out.println("actie");
 		}
 	}
 	
