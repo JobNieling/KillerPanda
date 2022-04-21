@@ -16,9 +16,27 @@ public abstract class Character extends DynamicCompositeEntity implements SceneB
 	}
 
 	@Override
-	public abstract void notifyBoundaryTouching(SceneBorder border) ;
-
-	@Override
 	protected abstract void setupEntities() ;
+	
+	@Override
+	public void notifyBoundaryTouching(SceneBorder border) {
+		setSpeed(0);
+
+	    switch(border){
+	        case TOP:
+	            setAnchorLocationY(1);
+	            break;
+	        case BOTTOM:
+	            setAnchorLocationY(getSceneHeight() - getHeight() - 1);
+	            break;
+	        case LEFT:
+	            setAnchorLocationX(1);
+	            break;
+	        case RIGHT:
+	            setAnchorLocationX(getSceneWidth() - getWidth() - 1);
+	        default:
+	            break;
+	        }
+	}
 
 }
